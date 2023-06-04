@@ -1,0 +1,94 @@
+#	Author:		Eric Conner
+#	Email:		Eric@EricConnerApps.com
+#	Date:		06-10-2013
+#	Project:	ATmega32 for Arduino IDE
+#	Version:	v1.2
+
+##############################################################
+
+mega32-1.name=ATmega32-1mhz
+mega32-1.build.mcu=atmega32
+mega32-1.build.f_cpu=1000000L
+mega32-1.build.core=arduino:arduino
+mega32-1.build.variant=mega32
+
+mega32-1.upload.maximum_size=32000
+
+mega32-1.bootloader.low_fuses=0xE1
+mega32-1.bootloader.high_fuses=0xD9
+#mega32-1.bootloader.extended_fuses=0xFD
+
+##############################################################
+
+mega32-8.name=ATmega32-8mhz
+mega32-8.build.mcu=atmega32
+mega32-8.build.f_cpu=8000000L
+mega32-8.build.core=arduino:arduino
+mega32-8.build.variant=mega32
+
+mega32-8.upload.maximum_size=32000
+
+mega32-8.bootloader.low_fuses=0xE4
+mega32-8.bootloader.high_fuses=0xD9
+#mega32-8.bootloader.extended_fuses=0xFD
+
+##############################################################
+
+mega32-16.name=ATmega32-External 16mhz
+mega32-16.build.mcu=atmega32
+mega32-16.build.f_cpu=16000000L
+mega32-16.build.core=arduino:arduino
+mega32-16.build.variant=mega32
+
+mega32-16.upload.maximum_size=32000
+
+mega32-16.bootloader.low_fuses=0xEF
+mega32-16.bootloader.high_fuses=0x89
+#mega32-16.bootloader.extended_fuses=0xFD
+
+##############################################################
+
+atmega32-16.name=ATMega32@16MHz(external oscillator)
+
+atmega32-16.upload.tool=avrdude
+atmega32-16.upload.protocol=arduino
+atmega32-16.upload.maximum_size=30720
+atmega32-16.upload.maximum_data_size=2048
+atmega32-16.upload.speed=19200
+
+atmega32-16.bootloader.tool=avrdude
+atmega32-16.bootloader.low_fuses=0xFF
+atmega32-16.bootloader.high_fuses=0xDA
+atmega32-16.bootloader.unlock_bits=0x3F
+atmega32-16.bootloader.lock_bits=0x0F
+atmega32-16.file=optiboot/Bootloader32.hex
+
+atmega32-16.build.mcu=atmega32
+atmega32-16.build.board=AVR_ATMEGA32-16
+atmega32-16.build.f_cpu=16000000L
+atmega32-16.build.core=arduino
+atmega32-16.build.variant=mega32
+
+
+##############################################################
+
+m32.name=Arduino Mega32
+
+m32.upload.tool=avrdude
+m32.upload.protocol=arduino
+m32.upload.maximum_size=32256
+m32.upload.maximum_data_size=2048
+m32.upload.speed=115200
+
+m32.bootloader.tool=avrdude
+m32.bootloader.low_fuses=0xFF
+m32.bootloader.high_fuses=0xDE
+m32.bootloader.unlock_bits=0x3F
+m32.bootloader.lock_bits=0x0F
+m32.file=optiboot/optiboot_atmega32_16M.hex
+
+m32.build.mcu=atmega32
+m32.build.board=AVR_32
+m32.build.f_cpu=16000000L
+m32.build.core=arduino
+m32.build.variant=mega32
